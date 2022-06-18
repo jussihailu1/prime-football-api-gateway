@@ -16,23 +16,15 @@ repositories {
 }
 
 dependencies {
-
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-
-//	implementation("org.springframework.cloud:spring-cloud-starter-config:3.1.3")
-//	implementation("org.springframework.cloud:spring-cloud-config-client:3.1.3")
-//	implementation("org.springframework.cloud:spring-cloud-config-server:3.1.3")
-
 	implementation("org.springframework.cloud:spring-cloud-starter-gateway:3.1.3")
-	implementation("org.springframework.cloud:spring-cloud-starter-circuitbreaker-resilience4j:2.1.3")
-
-	implementation("org.springframework.boot:spring-boot-starter-oauth2-resource-server")
-	implementation("org.springframework.boot:spring-boot-starter-security")
-
-	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+	implementation("org.springframework.security:spring-security-core:5.7.1")
+	implementation("org.springframework.boot:spring-boot-starter-oauth2-resource-server:2.7.0")
 	implementation("com.google.firebase:firebase-admin:8.2.0")
-
+	compileOnly("org.projectlombok:lombok")
+	annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
+	annotationProcessor("org.projectlombok:lombok")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework.security:spring-security-test")
 }
